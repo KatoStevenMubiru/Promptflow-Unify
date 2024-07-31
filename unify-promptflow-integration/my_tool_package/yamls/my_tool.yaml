@@ -1,0 +1,47 @@
+my_tool_package.tools.my_tool.my_function:
+  function: my_function
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    input_text:
+      type:
+      - string
+  module: my_tool_package.tools.my_tool
+  name: Hello World Tool
+  description: This is hello world tool
+  type: python
+
+my_tool_package.tools.my_tool.optimize_llm:
+  function: optimize_llm
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    prompt:
+      type:
+      - string
+    constraints:
+      type:
+      - dict
+  module: my_tool_package.tools.my_tool
+  name: Optimize LLM Tool
+  description: This tool selects the optimal LLM based on provided constraints and generates a response.
+  type: python
+
+my_tool_package.tools.my_tool.benchmark_models:
+  function: benchmark_models
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    prompt_set:
+      type:
+      - list
+    models:
+      type:
+      - list
+  module: my_tool_package.tools.my_tool
+  name: Benchmark Models Tool
+  description: This tool benchmarks multiple models with a set of prompts and returns the results.
+  type: python
